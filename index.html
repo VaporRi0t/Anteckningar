@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Notes - Your free and open source offline notepad application!</title>
+  <link rel="stylesheet" href="https://michaelsboost.com/Notes/libraries/font-awesome/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://treehouse-code-samples.s3.amazonaws.com/poly/css/application.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'>
+<link rel='stylesheet' href='//cdn.quilljs.com/1.3.6/quill.snow.css'>
+<link rel='stylesheet' href='//cdn.quilljs.com/1.3.6/quill.bubble.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- search bar -->
+<input id="search" type="text" placeholder="Search..." list="searchtitles" name="name" onkeyup="searchFunction()" onchange="searchFunction()">
+<datalist id="searchtitles"></datalist>
+
+<!-- close menu (and donate button) -->
+<a id="menu" class="menuicon" href="https://michaelsboost.com/donate/">
+  <i class="fa fa-heart"></i>
+</a>
+
+<!-- notes header, add note and delete note buttons -->
+<div class="grid">
+  <div class="grid__col--12"><br>
+    <h1>
+      <a id="about" class="h1" href="https://github.com/michaelsboost/Notes/" target="_blank">
+        Notes 
+      </a>
+      <span id="totalnotes" class="totalnotes">(0)</span>
+      <span class="notebtns fr">
+        <button class="icon" id="addnote">
+          <i class="fa fa-plus"></i>
+        </button>
+        &nbsp;
+        <button class="icon" id="deletenote">
+          <i class="fa fa-trash"></i>
+        </button>
+      </span>
+    </h1>
+  </div>
+</div>
+
+<!-- your notes -->
+<div class="grid">
+  <div class="grid__col--12">
+    <ul class="list" id="list"></ul>
+
+    <!-- scratchpad header -->
+    <br>
+    <h1>Scratchpad 
+      <span class="fr">
+        <button class="icon" id="clearpad">
+          <i class="fa fa-trash"></i>
+        </button>
+      </span>
+    </h1>
+
+    <!-- scratchpad -->
+    <textarea id="scratchpad" class="scratchpad" placeholder="Write something..."></textarea>
+  </div>
+</div>
+
+<div id="dialog" class="dialog hide">
+  <article class="note">
+    <input id="editorTitle" type="text" placeholder="Title">
+    <section id="editorBody"></section>
+  </article>
+</div>
+<!-- partial -->
+  <script src='//cdn.quilljs.com/1.3.6/quill.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* resets */
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+}
+body > input[type=search] {
+  width: calc(100% - 30px);
+  border: 0;
+}
+body > input {
+  font-weight: 300;
+  font-size: 2.625em;
+  line-height: 1.09524;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/* removes datalist dropdown arrow */
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* menu */
+.menuicon {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  margin: .25em;
+  font-size: 2.625em;
+  z-index: 2;
+}
+.icon {
+  transform: scale(0.75);
+}
+
+/* notes */
+.list {
+  overflow: auto;
+  height: calc(100vh - 70vh);
+}
+.list > li:nth-child(1) {
+  padding-top: 15px;
+}
+.list > li {
+  cursor: pointer;
+  padding-bottom: 25px;
+}
+.list > li:not(:first-child) {
+  padding-top: 15px;
+}
+.note > article {
+  display: block;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.dialog {
+  cursor: default;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  z-index: 1;
+  height: auto;
+  overflow: auto;
+}
+.list .note {
+  height: 54px;
+  overflow: hidden;
+}
+.dialog .note > input {
+  cursor: text;
+  font-weight: 300;
+  font-size: 2.625em;
+  line-height: 0;
+  padding: 0;
+  margin: 0 0 .5em 0;
+  white-space: nowrap;
+  overflow: auto;
+  background: transparent;
+  font-family: 'Lato', sans-serif;
+}
+.dialog .note > section {
+  cursor: text;
+  height: calc(100vh - 146px);
+}
+
+/* scratchpad */
+.scratchpad {
+  margin: 0;
+  min-height: calc(100vh - 75vh);
+  resize: vertical;
+  border-radius: 5px;
+}
+
+/* misc */
+.fr {
+  float: right;
+}
+.hide {
+  display: none;
+}
+
+/* theme */
+:root {
+  --colorprimary: #fff;
+  --colorsecondary: #aaa;
+  --iconcolor: #666;
+  --bgcolor: #000;
+}
+
+body {
+  color: var(--colorprimary);
+  background: var(--bgcolor);
+}
+.grid > .grid__col--12 > h1 {
+  color: var(--colorprimary);
+}
+body > input {
+  color: var(--colorprimary);
+  background: transparent;
+}
+button {
+  border: 0;
+  background: transparent;
+}
+
+/* menu */
+.menuicon {
+  color: #ff4343;
+}
+.menuicon.opened {
+  color: var(--colorprimary);
+}
+
+/* notes */
+.ql-toolbar {
+  background: #fff;
+}
+.ql-toolbar.ql-snow {
+  border-color: #5f5c4b;
+}
+.h1 {
+  color: #3aff22;
+}
+.totalnotes {
+  color: var(--colorsecondary);
+}
+.list {
+  border-top: 1px solid var(--colorsecondary);
+}
+.list > li {
+  border-bottom: 1px solid var(--colorsecondary);
+}
+.dialog, .note.opened {
+  background: var(--bgcolor);
+}
+.notebtns button.active:nth-child(1) {
+  color: #21c5c0;
+}
+.notebtns button.active:nth-child(2) {
+  color: #389b3c;
+}
+button.icon {
+  color: var(--colorprimary);
+}
+
+/* scratchpad */
+.scratchpad {
+  background: #25251b;
+  border: 1px solid #5f5c4b;
+}
