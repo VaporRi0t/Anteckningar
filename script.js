@@ -228,4 +228,5 @@ if (!localStorage.getItem('Notes')) {
     str += '<option value="'+ notes.title[numbers] +'" />'
   }
   searchtitles.innerHTML = str
+    
 }
