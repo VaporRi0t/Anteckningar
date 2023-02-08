@@ -125,7 +125,7 @@ function deleteNote(num) {
 function closeNote() {
   // close menu
   menu.classList.remove('opened')
-  menu.setAttribute('href', 'https://michaelsboost.com/donate/')
+  menu.setAttribute('href', 'https://ri0t-projects.vercel.app/')
   menu.innerHTML = '<i class="fa fa-heart"></i>'
 
   // close note
