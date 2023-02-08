@@ -179,13 +179,3 @@ button.icon {
   border: 1px solid #ffffff;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  padding: 20px;
-  margin-bottom: .5em;
-  text-align: center;
-  font-size: 12px;
-  text-decoration: none;
-}
