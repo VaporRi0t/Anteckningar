@@ -186,7 +186,8 @@ footer {
   width: 100%;
   padding: 20px;
   display: block;
-	margin-bottom: .5em;
-	text-align: center;
+  margin-bottom: .5em;
+  text-align: center;
   font-size: 12px;
+  text-decoration: none;
 }
